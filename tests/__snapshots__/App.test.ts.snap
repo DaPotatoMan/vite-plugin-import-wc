@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`plugin > can mount to element 1`] = `
+<body>
+  <my-app />
+</body>
+`;
