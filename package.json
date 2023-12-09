@@ -12,7 +12,10 @@
     }
   },
   "scripts": {
-    "build": "tsup-node src/index.ts --clean --format=esm --dts"
+    "build": "tsup-node src/index.ts --clean --format=esm --dts",
+    "test": "vitest --run",
+    "prepublish": "pnpm test && pnpm build",
+    "deploy": "pnpm bumpp && pnpm publish --no-git-checks"
   },
   "author": "dapotatoman",
   "license": "MIT",
@@ -20,6 +23,7 @@
     "@antfu/eslint-config": "^2.4.3",
     "@vitejs/plugin-vue": "^4.5.2",
     "@vue/test-utils": "^2.4.3",
+    "bumpp": "^9.2.0",
     "eslint": "^8.55.0",
     "jsdom": "^23.0.1",
     "tsup": "^8.0.1",
